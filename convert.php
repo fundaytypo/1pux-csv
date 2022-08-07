@@ -72,21 +72,21 @@ foreach ($jsonDecoded['accounts'] as $account) {
 				$itemPwHistory .= '### END PASSWORD HISTORY ###' . NL . NL;
 			}
 
-			$itemNotes .= $itemURLs; 		// Add additional URLs to notes
-			$itemNotes .= $itemPwHistory; 	// Add password history to notes
-			$itemNotes .= $itemSections; 	// Add sections (array dump, can't be bothered to parse it because it's mostly useless)
+			$itemNotes .= $itemURLs;        // Add additional URLs to notes
+			$itemNotes .= $itemPwHistory;   // Add password history to notes
+			$itemNotes .= $itemSections;    // Add sections (array dump, can't be bothered to parse it because it's mostly useless)
 
 			if(!is_array($outVaults[$vaultName])) { $outVaults[$vaultName] = array(); }
 			if(!is_array($outVaults[$vaultName][$itemState])) { $outVaults[$vaultName][$itemState] = array(); }
 			if(!is_array($outVaults[$vaultName][$itemState][$i])) { $outVaults[$vaultName][$itemState][$i] = array(); }
 
-			$outVaults["$vaultName"]["$itemState"]["$i"]['title'] = $itemTitle;			// Column 1
-			$outVaults["$vaultName"]["$itemState"]["$i"]['username'] = $itemUsername;	// Column 2
-			$outVaults["$vaultName"]["$itemState"]["$i"]['password'] = $itemPassword;	// Column 3
-			$outVaults["$vaultName"]["$itemState"]["$i"]['url'] = $itemURL;				// Column 4
-			$outVaults["$vaultName"]["$itemState"]["$i"]['created'] = $itemCreated;		// Column 5
-			$outVaults["$vaultName"]["$itemState"]["$i"]['updated'] = $itemUpdated;		// Column 6
-			$outVaults["$vaultName"]["$itemState"]["$i"]['notes'] = $itemNotes;			// Column 7
+			$outVaults["$vaultName"]["$itemState"]["$i"]['title'] = $itemTitle;         // Column 1
+			$outVaults["$vaultName"]["$itemState"]["$i"]['username'] = $itemUsername;   // Column 2
+			$outVaults["$vaultName"]["$itemState"]["$i"]['password'] = $itemPassword;   // Column 3
+			$outVaults["$vaultName"]["$itemState"]["$i"]['url'] = $itemURL;             // Column 4
+			$outVaults["$vaultName"]["$itemState"]["$i"]['created'] = $itemCreated;     // Column 5
+			$outVaults["$vaultName"]["$itemState"]["$i"]['updated'] = $itemUpdated;     // Column 6
+			$outVaults["$vaultName"]["$itemState"]["$i"]['notes'] = $itemNotes;         // Column 7
 			$i++;
 		}
 	}
