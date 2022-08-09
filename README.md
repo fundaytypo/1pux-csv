@@ -11,6 +11,7 @@ Licences, credit cards etc are appended to the notes section as a printed array 
 Attachments are not kept, they are in a folder inside the 1pux file (which is really just a zip archive). You will need to manually add attachments to your password manager.
 
 The export.data file is just a JSON text file, you should keep it and add it as an attachment in your new password manager, in case you need it for future reference. Keep the file safe, as it contains plain-text passwords! My script is not bug free, it's quick and dirty like I said. Use at your own risk :)
+
 [1pux format info](https://support.1password.com/1pux-format/)
 
 ## Usage
