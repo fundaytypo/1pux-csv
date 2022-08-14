@@ -76,10 +76,6 @@ foreach ($jsonDecoded['accounts'] as $account) {
 			$itemNotes .= $itemPwHistory;   // Add password history to notes
 			$itemNotes .= $itemSections;    // Add sections (array dump, can't be bothered to parse it because it's mostly useless)
 
-			if(!is_array($outVaults[$vaultName])) { $outVaults[$vaultName] = array(); }
-			if(!is_array($outVaults[$vaultName][$itemState])) { $outVaults[$vaultName][$itemState] = array(); }
-			if(!is_array($outVaults[$vaultName][$itemState][$i])) { $outVaults[$vaultName][$itemState][$i] = array(); }
-
 			$outVaults["$vaultName"]["$itemState"]["$i"]['title'] = $itemTitle;         // Column 1
 			$outVaults["$vaultName"]["$itemState"]["$i"]['username'] = $itemUsername;   // Column 2
 			$outVaults["$vaultName"]["$itemState"]["$i"]['password'] = $itemPassword;   // Column 3
